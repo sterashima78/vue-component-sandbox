@@ -5,6 +5,7 @@
 <meta charset="utf-8" />
 <title>vue-component-sandbox demo</title>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@vue/composition-api@1.0.0-rc.1"></script>
 <script src="./vue-component-sandbox.umd.js"></script>
 <style>
   #app {
