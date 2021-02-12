@@ -9,5 +9,12 @@ const VueComponentSandbox: PluginObject<void> = {
 };
 export const VComponentSandbox = ComponentSandbox;
 export default VueComponentSandbox;
-export { NodeData, NodeTree, Installer, PreProcess, RouteNodes } from "./type";
+export {
+  NodeData,
+  NodeTree,
+  Installer,
+  PreProcess,
+  RouteNodes,
+  EleNode
+} from "./type";
 export { makeNodeTree } from "@sterashima/vue-component-render";

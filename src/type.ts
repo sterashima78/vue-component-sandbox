@@ -26,8 +26,4 @@ export type IframeWindow = Window & VueProps;
 export type LoadedIframeWindow = Window & Required<VueProps>;
 export type PreProcess = (before: NodeData) => NodeData;
 export type Installer = (Vue: VueConstructor<Vue>) => void;
-export {
-  NodeData,
-  NodeTree,
-  makeNodeTree
-} from "@sterashima/vue-component-render";
+export { NodeData, NodeTree, EleNode } from "@sterashima/vue-component-render";
