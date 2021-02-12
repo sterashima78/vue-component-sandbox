@@ -1,5 +1,5 @@
-import Vue, { VueConstructor, ComponentOptions } from "vue";
-import VueRouter, { Route, RouteConfig } from "vue-router";
+import { VueConstructor } from "vue";
+import VueRouter, { RouteConfig } from "vue-router";
 import { LocalNodeState, RendererFactory, RouteNodes } from "./type";
 import { klona } from "klona/json";
 
@@ -9,7 +9,6 @@ export const routing = (router: Pick<VueRouter, "push" | "currentRoute">) => (
   if (path === undefined || path === router.currentRoute.path) return;
   router.push({ path });
 };
-
 
 const pathToRoute = (
   Vue: VueConstructor<Vue>,

@@ -1,14 +1,25 @@
 import {
   nodeDataConverterFactory,
-  nodeRenderFactory,
+  nodeRenderFactory
 } from "@sterashima/vue-component-render";
 
-import { routing, createRoute, updateRoute, toRouteByPathFactory } from "./router";
+import {
+  routing,
+  createRoute,
+  updateRoute,
+  toRouteByPathFactory
+} from "./router";
 import Vue, { VueConstructor, ComponentOptions } from "vue";
 import VueRouter, { Route } from "vue-router";
 import { klona } from "klona/json";
 import { Ref, SetupContext, watch } from "@vue/composition-api";
-import { PreProcess, LocalNodeState, RouteNodes, IframeWindow, LoadedIframeWindow } from "./type";
+import {
+  PreProcess,
+  LocalNodeState,
+  RouteNodes,
+  IframeWindow,
+  LoadedIframeWindow
+} from "./type";
 
 export const waitLoad = async (w: IframeWindow) =>
   new Promise<LoadedIframeWindow>(r => {

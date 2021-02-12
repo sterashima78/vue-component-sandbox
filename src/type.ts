@@ -14,7 +14,7 @@ export type LocalNodeState = {
   node: RouteNodes;
 };
 
-export type RendererFactory = ReturnType<typeof nodeRenderFactory>
+export type RendererFactory = ReturnType<typeof nodeRenderFactory>;
 
 export type VueProps = {
   Vue?: VueConstructor<Vue>;
@@ -25,5 +25,9 @@ export type VueProps = {
 export type IframeWindow = Window & VueProps;
 export type LoadedIframeWindow = Window & Required<VueProps>;
 export type PreProcess = (before: NodeData) => NodeData;
-export type Installer = (Vue: VueConstructor<Vue>) => void
-export { NodeData } from "@sterashima/vue-component-render"
+export type Installer = (Vue: VueConstructor<Vue>) => void;
+export {
+  NodeData,
+  NodeTree,
+  makeNodeTree
+} from "@sterashima/vue-component-render";
