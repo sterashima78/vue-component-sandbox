@@ -5,6 +5,7 @@
   "main": "./dist/vue-component-sandbox.common.js",
   "unpkg": "./dist/vue-component-sandbox.umd.min.js",
   "jsdelivr": "./dist/vue-component-sandbox.umd.min.js",
+  "typings": "dist/types/main.d.ts",
   "files": [
     "/dist/*.js",
     "/dist/*.map",
