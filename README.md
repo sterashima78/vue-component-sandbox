@@ -76,6 +76,14 @@
     methods: {
       log: console.log,
     },
+    mounted(){
+      setInterval(()=> {
+        this.nodes = {
+          "/": this.nodes["/a"],
+          "/a": this.nodes["/"],
+        }
+      }, 1000)
+    },
     data() {
       return {
         script: document.getElementById("script").content.textContent,

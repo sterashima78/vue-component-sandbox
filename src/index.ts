@@ -31,7 +31,10 @@ export const waitLoad = async (w: IframeWindow) =>
     r(w as LoadedIframeWindow);
   });
 
-export const createLocalState = (nodes: Ref<RouteNodes>) =>
+export const createLocalState = (
+  Vue: VueConstructor<Vue>,
+  nodes: Ref<RouteNodes>
+) =>
   Vue.observable<LocalNodeState>({
     node: klona(nodes.value)
   });
@@ -66,7 +69,7 @@ export const loadedFactory = (
   const loadedWindow = await waitLoad(w);
   installer(loadedWindow.Vue);
 
-  const localState = createLocalState(nodes);
+  const localState = createLocalState(loadedWindow.Vue, nodes);
 
   const converter = converterFactory(preprocess);
   const rendererFactory = createRendererFactory(converter);
@@ -86,7 +89,7 @@ export const loadedFactory = (
     nodes,
     updateRoute(
       router,
-      toRouteByPathFactory(localState, Vue, rendererFactory),
+      toRouteByPathFactory(localState, loadedWindow.Vue, rendererFactory),
       localState
     ),
     {
