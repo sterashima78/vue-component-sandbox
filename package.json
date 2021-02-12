@@ -1,6 +1,6 @@
 {
   "name": "@sterashima/vue-component-sandbox",
-  "version": "0.0.1-alpha.3",
+  "version": "0.0.1-alpha.4",
   "author": "sterashima",
   "main": "./dist/vue-component-sandbox.common.js",
   "unpkg": "./dist/vue-component-sandbox.umd.min.js",
