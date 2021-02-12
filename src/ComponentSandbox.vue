@@ -11,10 +11,9 @@
 </template>
 <script lang="ts">
 import { PropType, defineComponent, toRef } from "@vue/composition-api";
-import Vue, { VueConstructor } from "vue";
 import { VIframeSandbox } from "vue-iframe-sandbox";
-import { RouteNodes, useSandbox } from ".";
-import { NodeData } from "@sterashima/vue-component-render";
+import { RouteNodes, NodeData, Installer } from "./type";
+import { useSandbox } from ".";
 
 export default defineComponent({
   props: {
@@ -35,7 +34,7 @@ export default defineComponent({
       default: () => []
     },
     installer: {
-      type: Function as PropType<(Vue: VueConstructor<Vue>) => void>,
+      type: Function as PropType<Installer>,
       default: () => undefined
     },
     nodes: {
